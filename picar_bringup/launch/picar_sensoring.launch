@@ -1,0 +1,5 @@
+<launch>
+
+<node pkg="picar_sensor_ultrasonic" type="picar_sensor_ultrasonic_node" name="picar_sensor_ultrasonic_node" launch-prefix="sudo"/>
+
+</launch>

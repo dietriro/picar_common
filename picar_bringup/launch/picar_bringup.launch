@@ -1,0 +1,16 @@
+<launch>
+
+	<param name="/joy_node/dev" value="/dev/input/js0"/>
+	<param name="/joystick/dev" value="/dev/input/js0"/>
+
+	<include file="$(find turtlebot_teleop)/launch/xbox360_teleop.launch"/>
+
+	<node pkg="picar_driving" type="picar_driving_node" name="picar_driving_node" />
+
+	<node pkg="raspicam" type="raspicam_node" name="raspicam_node">
+		<param name="height" value="240"/>
+		<param name="width" value="320"/>
+ 		<param name="framerate" value="10"/>
+	</node>
+
+</launch>
